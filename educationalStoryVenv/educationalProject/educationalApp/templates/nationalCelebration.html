@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>National Celebrations</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      body {
+        animation: fadeIn 1.5s ease-out;
+      }
+      
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e1bee7);
+      color: #333;
+      text-align: center;
+      padding: 40px 0;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h1 {
+      color: #6a1b9a;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      background-color: #fff8e1;
+      padding: 20px;
+      border-radius: 15px;
+      margin: 0 auto 40px;
+      width: 90%;
+      max-width: 720px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      width: 100%;
+      margin: auto;
+      border-collapse: separate;
+      border-spacing: 20px;
+      z-index: 2;
+      position: relative;
+    }
+
+    th {
+      background-color: #6a1b9a;
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    td {
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 20px;
+      font-size: 1.1rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      position: relative;
+    }
+
+    td:hover {
+      transform: translateY(-5px);
+      background-color: #f3e5f5;
+    }
+
+    td i.speaker {
+      margin-left: 10px;
+      font-size: 1.3rem;
+      color: #6a1b9a;
+      transition: transform 0.3s;
+    }
+
+    td:hover i.speaker {
+      transform: rotate(360deg);
+    }
+
+    .icon {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #039be5;
+    }
+
+    .religious .icon {
+      color: #ab47bc;
+    }
+
+    .empty {
+      background: none;
+      box-shadow: none;
+      cursor: default;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* 🌸 Floating Flower Animations */
+    .flower {
+      position: absolute;
+      font-size: 2rem;
+      color: #f06292;
+      animation: float 12s infinite ease-in-out;
+      opacity: 0.4;
+      z-index: 0;
+    }
+
+    .flower:nth-child(1) {
+      top: 20%;
+      left: 5%;
+      animation-delay: 0s;
+    }
+
+    .flower:nth-child(2) {
+      top: 40%;
+      left: 90%;
+      animation-delay: 2s;
+    }
+
+    .flower:nth-child(3) {
+      top: 60%;
+      left: 20%;
+      animation-delay: 4s;
+    }
+
+    .flower:nth-child(4) {
+      top: 80%;
+      left: 80%;
+      animation-delay: 6s;
+    }
+
+    .flower:nth-child(5) {
+      top: 10%;
+      left: 50%;
+      animation-delay: 8s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(180deg);
+      }
+      100% {
+        transform: translateY(0) rotate(360deg);
+      }
+    }
+    .back-button {
+        display: inline-block;
+        padding: 12px 24px;
+        margin-top: 20px;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #6a1b9a;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      
+      .back-button:hover {
+        background-color: #8e24aa;
+        transform: translateY(-3px);
+      }
+      
+  </style>
+</head>
+<body>
+
+  <!-- 🌸 Floating Flower Icons -->
+  <i class="fas fa-spa flower"></i>
+  <i class="fas fa-spa flower"></i>
+  <i class="fas fa-spa flower"></i>
+  <i class="fas fa-spa flower"></i>
+  <i class="fas fa-spa flower"></i>
+
+  <h1 onclick="pronounceWord('National Celebrations')" style="cursor: pointer;">
+    <span>National Celebrations <i class="fas fa-volume-up speaker"></i></span>
+  </h1>
+  
+  <p onclick="pronounceWord('Our national celebrations are of two types: civic and religious. These two are different, as can be seen from the examples below.')" style="cursor: pointer;">
+    <span>
+      Our national celebrations are of two types: <strong>civic</strong> and <strong>religious</strong>.
+      These two are different, as can be seen from the examples below. 
+      <i class="fas fa-volume-up speaker"></i>
+    </span>
+  </p>
+  
+
+  <table>
+    <tr>
+      <th>Civic</th>
+      <th>Religious</th>
+    </tr>
+    <tr>
+      <td onclick="pronounceWord('Independence Day')">
+        <i class="fas fa-flag icon"></i>
+        Independence Day <i class="fas fa-volume-up speaker"></i>
+      </td>
+      <td class="religious" onclick="pronounceWord('Christmas')">
+        <i class="fas fa-church icon"></i>
+        Christmas <i class="fas fa-volume-up speaker"></i>
+      </td>
+    </tr>
+    <tr>
+      <td onclick="pronounceWord('National Heroes Day')">
+        <i class="fas fa-user-shield icon"></i>
+        National Heroes Day <i class="fas fa-volume-up speaker"></i>
+      </td>
+      <td class="religious" onclick="pronounceWord('New Year')">
+        <i class="fas fa-clock icon"></i>
+        New Year <i class="fas fa-volume-up speaker"></i>
+      </td>
+    </tr>
+    <tr>
+      <td onclick="pronounceWord('Fall of Bataan')">
+        <i class="fas fa-monument icon"></i>
+        Fall of Bataan <i class="fas fa-volume-up speaker"></i>
+      </td>
+      <td class="religious" onclick="pronounceWord('Holy Week')">
+        <i class="fas fa-cross icon"></i>
+        Holy Week <i class="fas fa-volume-up speaker"></i>
+      </td>
+    </tr>
+    <tr>
+      <td onclick="pronounceWord('Labor Day')">
+        <i class="fas fa-briefcase icon"></i>
+        Labor Day <i class="fas fa-volume-up speaker"></i>
+      </td>
+      <td class="religious" onclick="pronounceWord('All Souls Day')">
+        <i class="fas fa-praying-hands icon"></i>
+        All Souls Day <i class="fas fa-volume-up speaker"></i>
+      </td>
+    </tr>
+    <tr>
+      <td class="empty"></td>
+      <td class="religious" onclick="pronounceWord('Fiesta of the Different Religions')">
+        <i class="fas fa-hands icon"></i>
+        Fiesta of the Different Religions <i class="fas fa-volume-up speaker"></i>
+      </td>
+    </tr>
+  </table>
+  <div style="margin-top: 50px;">
+    <a href="{% url 'backhome'%}" class="back-button">
+      <i class="fas fa-arrow-left"></i> Back to Landing Page
+    </a>
+  </div>
+  
+  <footer>
+    Made with ❤️ for cultural appreciation and joyful learning.
+  </footer>
+
+  <script>
+    function pronounceWord(word) {
+      const utterance = new SpeechSynthesisUtterance(word);
+      const voices = window.speechSynthesis.getVoices();
+      if (voices.length > 0) {
+        utterance.voice = voices.find(v => v.lang.startsWith('en')) || voices[0];
+      }
+      utterance.pitch = 1.2;
+      utterance.rate = 0.7;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    window.speechSynthesis.onvoiceschanged = () => {
+      window.speechSynthesis.getVoices();
+    };
+
+
+    window.addEventListener('load', () => {
+        document.body.style.visibility = 'visible';
+      });
+      
+  </script>
+</body>
+</html>
